@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        console.log("from console");
+        alert('you are now running jQuery');
+
+        $('a').click(function(){
+          alert('You are now leaving the page!')
+        });
+
+        $('#hide').click(function(){
+          $('p').hide();
+        });
+
+        $('#show').click(function(){
+          $('p').show();
+        });
+
+        $('h3').hover(function(){
+          $('h2').text('go to see the Space Needle');
+        });
+
+        $('.append').click(function(){
+          $('.result').append('<h3>the appended text to html</h3>');
+        });
+
+        $('button').click(function(){
+          $('button').css('background-color', 'blue');
+        });
+        //
+        // var mytext = $('#myParagraph').text();
+        // alert(mytext);
+        $('#ChangeMyParagraph').click(function(){
+          $('#myParagraph').text('Change of myParagraph');
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+    <p>This is a paragraph!</p>
+    <p>This is also a paragraph!</p>
+    <button id="hide">This will hide all paragraphs!</button>
+    <button id="show">Click to show all paragraphs!</button>
+    <a id="mylink" href="http://www.google.com">go to Google</a>
+    <h3>Mountain View, California</h3>
+    <h2>Seattle, Washington</h2>
+    <button class="append">Click to see .append work!</button>
+    <div class="result"></div>
+    <hr>
+    <hr>
+    <p id='myParagraph'>This is my paragraph! </p>
+    <button id="ChangeMyParagraph">ChangeParagraph</button>
+  </body>
+</html>

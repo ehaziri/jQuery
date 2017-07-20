@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JQueryFunctions</title>
+    <style>
+    .bluetext{
+      color:blue;
+    }
+    .silverbackground{
+      background-color: silver;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $('p').click(function(){
+        $(this).css('color', 'red');
+      });
+
+     $('input[type=text]').focus();
+
+     $('.bluetext').click(function(){
+       $('.bluetext').addClass('silverbackground');
+     });
+
+     $( "#bforval" ).click(function() {
+     var text = $(this).text();
+     $( "#inforval" ).val(text);
+    });
+
+    console.log('source value is', $('h3').attr('s'));
+
+    $('h4').html("<em>Hello to you.</em>")
+
+    $('body').data("foo", 52)
+    console.log($('body').data("foo"));
+
+    $('p').before("<span>Before</span>");
+    $('p').after("After");
+    $('p').append("Append");
+
+    $('#show').click(function(){
+      $('h1').show();
+    });
+    $('#hide').click(function(){
+      $('h1').hide();
+    });
+
+    $('h2').hide();
+    $( "#fadein" ).click(function() {
+     $( "h2" ).fadeIn( "slow", function() {
+      // Animation complete
+     });
+    });
+    $( "#fadeout" ).click(function() {
+     $( "h2" ).fadeOut( "slow", function() {
+      // Animation complete
+     });
+    });
+
+    $( "#slideup" ).click(function() {
+     $( "h5" ).slideUp();
+    });
+    $( "#slidedown" ).click(function() {
+     $( "h5" ).slideDown()
+    });
+
+    $( "#slidetoggle" ).click(function() {
+  $( "h6" ).slideToggle( "slow", function() {
+    // Animation complete.
+    });
+   });
+});
+    </script>
+  </head>
+  <body>
+    <p>Click here.</p> <hr>
+
+    Emri: <input type="text"> <hr>
+
+    <span class="bluetext">Click to add class backgroundsilver to this.</span> <hr>
+
+    <button id="bforval">Input</button>
+    <input id="inforval" type="text" value="click the button"> <hr>
+
+    <h3 s="hello">For attr: see the console.</h3><hr>
+    <h4></h4><hr>
+
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <h1>Show and hide<h1> <hr>
+
+   <div id="fadein">
+    Click here for fadein
+   </div>
+
+   <div id="fadeout">
+    Click here for fadeout
+   </div>
+   <h2>Fade in/out</h2>
+<hr>
+
+<div id="slideup">
+ Click here for slideup
+</div>
+<div id="slidedown">
+ Click here for slidedown
+</div>
+
+<h5>Slide down/up</h5>
+
+<button id="slidetoggle">
+ Click here for slidetoggle
+</button>
+<h6>for slidetoggle</h6>
+
+  </body>
+</html>

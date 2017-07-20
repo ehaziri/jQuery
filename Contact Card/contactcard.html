@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Card</title>
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.js'></script>
+    <link rel="stylesheet" type="text/css" href="contactcard_style.css">
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('form').on('click', 'input[type=submit]', function(){
+
+        var name=$('#fname').val();
+        var surname=$('#fsurname').val();
+        var description=$('#fdescription').val();
+
+        $('#right').append('<div class="card"><h2>'+name+' '+surname+'</h2><p>Click for description!</p></div>');
+
+        $('#right').on('click', 'div', function(){
+          $(this).html("<h4>"+description+"</h4>")
+        })
+
+        $('.blank').val("");
+        return false;
+      }
+    );
+
+
+    });
+    </script>
+  </head>
+  <body>
+   <div id="wrapper">
+      <div id="left">
+        <form>
+          <label for="name">First name:</label><input class="blank" id="fname" type="text">
+          <label for="surname">Last name:</label><input class="blank" id="fsurname" type="text">
+          <label for="description">Description:</label><input class="blank" id="fdescription" type="textarea"
+          placeholder="Enter description" rows = "4">
+          <input type="submit" value="Add User">
+        </form>
+      </div>
+
+      <div id="right">
+      </div>
+   </div><!-- end of wrapper   -->
+  </body>
+</html>

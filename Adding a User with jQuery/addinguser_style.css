@@ -1,0 +1,38 @@
+
+table{
+  font-weight: bold;
+}
+  table{
+    border: 1px solid black;
+  }
+  table td{
+  padding-right:20px;
+  }
+
+h1{
+  border-bottom: 2px solid black;
+}
+
+#thisform{
+  width: 280px;
+}
+  #label, input{
+    margin: 10px 0;
+  }
+  #fname{
+    margin-left: 27px;
+  }
+  #fsurname{
+    margin-left: 28px;
+  }
+  #femail{
+    margin-left: 4px;
+  }
+  #fcontact{
+    margin-left: 20px;
+  }
+
+button{
+  margin-left: 204px;
+  margin-top: 20px;
+}

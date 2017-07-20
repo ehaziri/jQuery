@@ -1,0 +1,41 @@
+#wrapper{
+  margin: 0 auto;
+  width: 900px;
+}
+
+#left, #right{
+  width:400px;
+  height: 400px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+label {
+font-weight: bold;
+display: block;
+width: 115px;
+float: left;
+}
+input{
+  margin: 5px 0;
+}
+label[for=description]{
+  width: 300px;
+  padding-bottom: 5px;
+}
+input[type=textarea]{
+height: 80px;
+width: 280px;
+margin-top: 5px;
+}
+
+input[type=submit],  input[type=textarea]{
+  display: block;
+}
+
+.card{
+  width: 200px;
+  border: 1px solid pink;
+  margin: 5px;
+  background-color: lightgrey;
+}

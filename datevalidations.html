@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Date</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+       $(".date").datepicker();
+
+       $('form').submit(function(){
+         var name= $('#name').val();
+         var d1 = $('#date1').val();
+         var d2=$('#date2').val();
+
+         if(name === ""){
+           $('body').append("<p class='red_text'>Please write your name.</p>");
+            $('input[type=submit]').removeClass('blue_back');
+           $('input[type=submit]').addClass('red_back');
+         }
+
+         else{
+           alert("Thanks " + name + "! Your Cruise leaves on "+d1+" and returns on "+d2+".");
+         }
+
+         $('.blank').val("");
+         return false;
+       });
+    });
+    </script>
+    <style>
+    .red_text{
+      color:red;
+    }
+    .red_back{
+      background-color: red;
+    }
+    .blue_back{
+      background-color: blue;
+    }
+    input{
+      display: block;
+      margin: 5px;
+    }
+    input[type="submit"]{
+      color: white;
+    }
+    </style>
+
+  </head>
+  <body>
+    <h3>Welcome to the Codingdojo plan-a-Cruise.</h3>
+    <form>
+      <input class="date blank" id="date1" type="text" placeholder="From:">
+      <input class="date blank" id="date2" type="text" placeholder="To:">
+      <input class="blank"id="name" type="text" placeholder="Name:">
+      <input class="blue_back" type="submit" value="Check Dates">
+   </form>
+  </body>
+</html>

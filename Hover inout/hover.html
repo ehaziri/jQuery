@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hover</title>
+    <link rel="stylesheet" type="text/css" href="css/hover_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $('body').sortable();
+
+            $('img').hover(
+             function(){
+              var old_source=$(this).attr('src');
+
+              console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+              console.log('source value is', $(this).attr('src'));
+
+              var alt_source = $(this).attr('data-alt-src');
+              $(this).attr({src:alt_source});
+              $(this).attr('data-alt-src', old_source);
+             },
+            function(){
+              var old_source=$(this).attr('src');
+              console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+              console.log('source value is', $(this).attr('src'));
+
+              var alt_source = $(this).attr('data-alt-src');
+              $(this).attr({src:alt_source});
+              $(this).attr('data-alt-src', old_source);
+             }
+          );
+    //
+    //   $('img').click(
+    //    function(){
+    //     console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+    //
+    //     var thepath = $(this).attr('data-alt-src');
+    //     $(this).attr({src:thepath});
+    //    },
+    //   function(){
+    //     console.log('source value is', $(this).attr('old_src'));
+    //
+    //     var thepath = $(this).attr('old_src');
+    //     $(this).attr({src:thepath});
+    //    }
+    // );
+
+});
+    </script>
+  </head>
+  <body>
+    <img src="images/cloth1.png" data-alt-src="images/clothback1.png">
+    <img src="images/cloth2.png" data-alt-src="images/clothback2.png">
+    <img src="images/cloth3.png" data-alt-src="images/clothback3.png">
+    <img src="images/cloth4.png" data-alt-src="images/clothback4.png">
+  </body>
+  <!-- <body>
+    <img src="images/cloth1.png" old_src="images/cloth1.png" data-alt-src="images/clothback1.png">
+    <img src="images/cloth2.png" old_src="images/cloth2.png" data-alt-src="images/clothback2.png">
+    <img src="images/cloth3.png" old_src="images/cloth3.png" data-alt-src="images/clothback3.png">
+    <img src="images/cloth4.png" old_src="images/cloth4.png" data-alt-src="images/clothback4.png">
+  </body> -->
+</html>

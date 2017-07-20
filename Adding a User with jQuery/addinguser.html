@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Adding user with jQuery</title>
+    <link rel="stylesheet" type="text/css" href="addinguser_style.css">
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.js'></script>
+    <script>
+
+      $(document).ready(function(){
+
+           $('form').submit(function(){
+
+              var name = $('#fname').val();
+              var surname= $('#fsurname').val();
+              var email= $('#femail').val();
+              var contact= $('#fcontact').val();
+              $('table').append('<tr><td>' + name + '</td> <td>' + surname + '</td> <td>' + email + '</td><td>' + contact + '</td></tr>');
+
+              $('.blank').val("");
+             return false;
+
+
+
+           });
+
+      });
+    </script>
+  </head>
+  <body>
+   <table>
+     <tr>
+       <td id="name">First Name</td>
+       <td id="surname">Last Name</td>
+       <td id="email">Email Address</td>
+       <td id="contact">Contact#</td>
+     </tr>
+     <tr></tr>
+   </table>
+
+ <div id="thisform">
+   <h1>Add User</h1>
+
+   <form>
+     <label for="name">First Name:</label><input class="blank" id="fname" type="text" placeholder="First Name">
+     <label for="surname">Last Name:</label><input class="blank" id="fsurname" type="text" placeholder="Last Name">
+     <label for="email">Email Address:</label><input class="blank" id="femail" type="text" placeholder="Email Address">
+     <label for="contact">Contact No.:</label><input class="blank" id="fcontact" type="text" placeholder="Phone#">
+
+   <input type="submit" value="Add User">
+ </form>
+
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Acc and tabs</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $( "#tabs" ).tabs();
+      $( "#accordion" ).accordion();
+    });
+    </script>
+    <style>
+    #ninja, #cat{
+      list-style: none;
+    }
+    </style>
+  </head>
+  <body>
+      <div id="tabs">
+        <ul>
+          <li><a href="#fragment-1"><span>Accordion</span></a></li>
+          <li><a href="#fragment-2"><span>Cat</span></a></li>
+          <li><a href="#fragment-3"><span>Ninja</span></a></li>
+        </ul>
+        <div id="fragment-1">
+          <p>First tab is active by default:</p>
+          <div id="accordion">
+            <h3>Ninja</h3>
+            <div>
+              <ul id="ninja">
+                <li><img src="ninja0.png"><li>
+                <li><img src="ninja1.png"><li>
+                <li><img src="ninja2.png"><li>
+                <li><img src="ninja3.png"><li>
+                <li><img src="ninja4.png"><li>
+             </ul>
+            </div>
+            <h3>Cat</h3>
+            <div>
+              <ul id="cat">
+                <li><img src="cat0.png"><li>
+                <li><img src="cat1.png"><li>
+                <li><img src="cat2.png"><li>
+                <li><img src="cat3.png"><li>
+                <li><img src="cat4.png"><li>
+             </ul>
+            </div>
+          </div>
+        </div>
+        <div id="fragment-2">
+          <ul id="cat">
+            <li><img src="cat0.png"><li>
+            <li><img src="cat1.png"><li>
+            <li><img src="cat2.png"><li>
+            <li><img src="cat3.png"><li>
+            <li><img src="cat4.png"><li>
+          </ul>
+        </div>
+        <div id="fragment-3">
+          <ul id="ninja">
+            <li><img src="ninja0.png"><li>
+            <li><img src="ninja1.png"><li>
+            <li><img src="ninja2.png"><li>
+            <li><img src="ninja3.png"><li>
+            <li><img src="ninja4.png"><li>
+         </ul>
+       </div>
+  </div>
+  </body>
+</html>
